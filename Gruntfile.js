@@ -31,6 +31,17 @@ module.exports = function (grunt) {
     // Project settings
     yeoman: appConfig,
 
+    ngAnnotate: {
+        app:{
+                files: [{
+                expand: true,
+                src: ['**/*.js', '!**/*.annotated.js'],
+                ext: '.annotated.js',
+                extDot: 'last'
+              }]
+            }
+    },
+
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
@@ -473,6 +484,13 @@ module.exports = function (grunt) {
     'usemin',
     'htmlmin'
   ]);
+
+  
+
+  grunt.registerTask('ngAnnotate', [
+    'ngAnnotate'
+  ]);
+  grunt.loadNpmTasks('grunt-ng-annotate');
 
   grunt.registerTask('default', [
     'newer:jshint',

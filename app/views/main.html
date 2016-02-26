@@ -1,4 +1,4 @@
-<div class="jumbotron">
+<div class="jumbotron" translate-namespace="VIEW">
   <h1>'Allo, 'Allo!</h1>
   <p class="lead">
     <img src="images/yeoman.png" alt="I'm Yeoman"><br>
@@ -7,7 +7,7 @@
   <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
 </div>
 
-<div class="row marketing">
+<div class="row marketing" translate-namespace="VIEW">
   <p>As directive with key value: use this the most</p>
   <h1 translate="Title">Title</h1>
   <p>As directive with key inside the tags</p>
@@ -17,6 +17,13 @@
   <!-- translate-value-name can be dynamic -->
   <p>With name coming dynamically</p>
   <h2 translate="Greeting" translate-value-name="Ankit"></h2>
+
+  <h1 translate=".Title">Title</h1>
+  <p>As directive with key inside the tags</p>
+  <h1 translate>.Created_By</h1>
+  <!-- translate-value-name can be dynamic -->
+  <p>With name coming dynamically</p>
+  <h2 translate=".Greeting" translate-value-name="Ankit"></h2>
 
 
   <p>Translating via service</p>

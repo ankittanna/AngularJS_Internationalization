@@ -21,6 +21,7 @@ angular
     'pascalprecht.translate'
   ])
   .run(function($rootScope){
+    console.log('Hello 1');
       $rootScope.$on('$translateChangeSuccess', function(){
         console.log('Translation change success!');
       });
@@ -38,6 +39,7 @@ angular
       });
   })
   .config(function($translateProvider){
+    console.log('Hello 2');
    /* var english = {
       "Title": "Internationalization",
       "Language": "Language",
@@ -109,10 +111,10 @@ angular
     });
     
     // not allow special characters
-    $translateProvider.useSanitizeValueStrategy('sanitize');
+    // $translateProvider.useSanitizeValueStrategy('sanitize');
     
     // allow special characters
-    // $translateProvider.useSanitizeValueStrategy('escaped');
+     $translateProvider.useSanitizeValueStrategy('escaped');
 
     $translateProvider.usePostCompiling(true);
     // $translateProvider.preferredLanguage('en');

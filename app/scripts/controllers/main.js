@@ -7,6 +7,8 @@
  * # MainCtrl
  * Controller of the angularJsInternationalizationApp
  */
+
+ /* @ngInject */
 angular.module('angularJsInternationalizationApp')
   .controller('MainCtrl', function (SampleService, $translate) {
     
